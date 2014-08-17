@@ -248,7 +248,23 @@ section {
   	background-size: cover;
 }
 
-.bg-carousel {
+.bg-carousel-1 {
+	background: url('/img/thanks.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-carousel-2 {
+	background: url('/img/beach.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-carousel-3 {
 	background: url('/img/thanks.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
