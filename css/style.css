@@ -169,7 +169,7 @@ h1 {
 }
 
 .divider {
-	height:100px;
+	height:80px;
 }
 
 .panel {
@@ -183,6 +183,10 @@ h1 {
 header h1
 {
 font-size: 24px;
+}
+
+.divider {
+	height:40px;
 }
 }
 
