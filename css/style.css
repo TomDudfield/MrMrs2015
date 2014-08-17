@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 html,
 body {
@@ -78,7 +78,7 @@ body {
 }
 
 h1,h2,h3,h4 {
-  font-family: 'Kreon', serif;
+  font-family: Lobster, serif;
   vertical-align:middle;
 }
 
