@@ -180,6 +180,10 @@ h1 {
 	header {
 		height: 95px;
 	}
+header h1
+{
+font-size: 24px;
+}
 }
 
 #map-canvas {
