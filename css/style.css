@@ -225,7 +225,7 @@ section {
 }
 
 .bg-1 {
-	background: url('img/gardens.jpg') no-repeat center center fixed; 
+	background: url('../img/gardens.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -233,7 +233,7 @@ section {
 }
 
 .bg-2 {
-	background: url('img/beach.jpg') no-repeat center center fixed; 
+	background: url('../img/beach.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -241,7 +241,7 @@ section {
 }
 
 .bg-3 {
-	background: url('img/thanks.jpg') no-repeat center center fixed; 
+	background: url('../img/thanks.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -249,7 +249,7 @@ section {
 }
 
 .bg-carousel-1 {
-	background: url('img/thanks.jpg') no-repeat center center fixed; 
+	background: url('../img/thanks.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -257,7 +257,7 @@ section {
 }
 
 .bg-carousel-2 {
-	background: url('img/beach.jpg') no-repeat center center fixed; 
+	background: url('../img/beach.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -265,7 +265,7 @@ section {
 }
 
 .bg-carousel-3 {
-	background: url('img/thanks.jpg') no-repeat center center fixed; 
+	background: url('../img/thanks.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
