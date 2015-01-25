@@ -1,4 +1,3 @@
-/* affix the navbar after scroll below header */
 $('#nav').affix({
       offset: {
         top: $('header').height()-$('#nav').height()
@@ -11,71 +10,32 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 
-/* highlight the top nav as scrolling occurs */
 $('body').scrollspy({ target: '#nav' })
 
-/* smooth scrolling for scroll to top */
-$('.scroll-top').click(function(){
-  $('body,html').animate({scrollTop:0},1000);
-})
+var autocomplete;
 
-/* smooth scrolling for nav sections */
-$('#nav .navbar-nav li>a').click(function(){
-  var link = $(this).attr('href');
-  var posi = $(link).offset().top+20;
-  $('body,html').animate({scrollTop:posi},700);
-})
-
-/* google maps */
-
-// enable the visual refresh
-google.maps.visualRefresh = true;
-
-var map;
 function initialize() {
-  var mapOptions = {
-    zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-  	// try HTML5 geolocation
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
-
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Location found using HTML5.'
-      });
-
-      map.setCenter(pos);
-    }, function() {
-      handleNoGeolocation(true);
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')), { language: 'en-GB', location: '50.719164,-1.880769', radius: '200', componentRestrictions: { country: "gb" } });
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        fillInAddress();
     });
-  } else {
-    // browser doesn't support geolocation
-    handleNoGeolocation(false);
-  }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var geolocation = new google.maps.LatLng(
+                position.coords.latitude, position.coords.longitude);
+            var circle = new google.maps.Circle({
+                center: geolocation,
+                radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+        });
+    }
 }
 
-function handleNoGeolocation(errorFlag) {
-  if (errorFlag) {
-    var content = 'Error: The Geolocation service failed.';
-  } else {
-    var content = 'Error: Your browser doesn\'t support geolocation.';
-  }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
+function fillInAddress() {
+    var place = autocomplete.getPlace();
+    console.log(place);
+    document.getElementById('saddr').value = place.formatted_address;
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
-
