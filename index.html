@@ -12,7 +12,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="js/ie10-viewport-bug-workaround.min.js"></script>
+    <script>
+        (function(){"use strict";if(navigator.userAgent.match(/IEMobile\/10\.0/)){var e=document.createElement("style");e.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.querySelector("head").appendChild(e)}})()
+    </script>
 
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
