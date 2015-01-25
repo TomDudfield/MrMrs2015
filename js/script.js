@@ -1,8 +1,17 @@
-$('#nav').affix({
-      offset: {
-        top: $('header').height()-$('#nav').height()
-      }
-});	
+function affixNav() {
+    //alert('asd');
+    $('#nav').affix({
+        offset: {
+            top: $('header').height() - $('#nav').height()
+        }
+    });
+};
+
+var resizeTimer;
+$(window).resize(function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(affixNav, 100);
+});
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {
@@ -10,6 +19,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 
+affixNav();
 $('body').scrollspy({ target: '#nav' })
 
 var autocomplete;
