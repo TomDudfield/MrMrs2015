@@ -72,6 +72,9 @@ header h1 {
 section {
     padding-top: 40px;
 }
+.top-section {
+    padding-top: 0;
+}
 
 .photo-section {
     color: #ffffff;
@@ -144,6 +147,7 @@ section {
     font-weight: 700;
     text-transform: uppercase;
     border-width: 0;
+    margin-bottom: 0;
 }
 
 .navbar-custom .navbar-nav > li > a {
